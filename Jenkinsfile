@@ -1,18 +1,6 @@
-simpleBuild {
- 
-    env = [
-        FOO : 42,
-        BAR : "YASS"
-    ]
-    
- 
-
-    before_script = "echo before"
-    script = 'echo after $FOO'
-    
-    notifications = [
-        email : "mneale@cloudbees.com"    
-    ]
-    
-    
+node {
+   stage 'Stage 1'
+   echo 'Hello World 1'
+   stage 'Stage 2'
+   echo 'Hello World 2'
 }
